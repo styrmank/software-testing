@@ -17,8 +17,7 @@
   },
   "homepage": "https://github.com/styrmank/software-testing#readme",
   "devDependencies": {
+    "coveralls": "^3.1.1",
     "jest": "^27.4.2"
   }
-  
-  
 }
