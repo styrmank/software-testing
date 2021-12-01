@@ -17,7 +17,9 @@ jobs:
         node-version: 10.x
 
     - name: npm install, make test-coverage
-      run: jest --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage
+      run: 
+	npm i jest
+jest --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage
 
     - name: Coveralls
       uses: coverallsapp/github-action@master
