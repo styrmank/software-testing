@@ -4,7 +4,7 @@
   "description": "Course project",
   "main": "index.js",
   "scripts": {
-    "test": "jest --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
+    "test": "jest --coverage && cat ./coverage/lcov.info "
   },
   "repository": {
     "type": "git",
