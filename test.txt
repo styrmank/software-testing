@@ -1,1 +1,1 @@
-testataan git pull
+testataan ssh avainta
