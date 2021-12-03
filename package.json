@@ -11,7 +11,8 @@
     "url": "git+https://github.com/styrmank/software-testing.git"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
+  "dependencies": {},
   "bugs": {
     "url": "https://github.com/styrmank/software-testing/issues"
   },
