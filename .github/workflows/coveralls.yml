@@ -28,7 +28,7 @@ jobs:
         cache: 'npm'
 
     - name: Install
-      run: npm install
+      run: npm install @babel/cli @babel/core @babel/node @babel/preset-env
 
     - name: Test
       
