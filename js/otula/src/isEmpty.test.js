@@ -1,4 +1,4 @@
-Const subtract = require(”./isEmpty”)
+import isEmpty from "./isEmpty"
 
 
 describe(”Test if is empty”, () => {

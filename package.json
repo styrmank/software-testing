@@ -12,7 +12,12 @@
   },
   "author": "",
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "@babel/cli": "^7.16.0",
+    "@babel/core": "^7.16.0",
+    "@babel/node": "^7.16.0",
+    "@babel/preset-env": "^7.16.4"
+  },
   "bugs": {
     "url": "https://github.com/styrmank/software-testing/issues"
   },
@@ -22,4 +27,3 @@
     "jest": "^27.4.2"
   }
 }
-

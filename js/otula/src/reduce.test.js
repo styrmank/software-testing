@@ -1,4 +1,4 @@
-Const subtract = require(”./reduce”)
+import reduce from "./reduce"
 
 
 describe(”Test reduce”, () => {

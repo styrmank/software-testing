@@ -1,4 +1,4 @@
-Const subtract = require(”./map”)
+import map from "./map"
 
 
 describe(”Test map”, () => {

@@ -1,4 +1,4 @@
-Const subtract = require(”./get”)
+import get from "./get"
 
 
 describe(”Test get”, () => {

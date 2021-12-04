@@ -1,4 +1,4 @@
-Const subtract = require(”./upperFirst”)
+import upperFirst from "./upperFirst"
 
 
 describe(”Test upperFirst”, () => {
