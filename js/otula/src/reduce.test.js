@@ -3,6 +3,6 @@ Const subtract = require(”./reduce”)
 
 describe(”Test reduce”, () => {
 	test(”should reduce correctly”, () => {
-		expect(isEmpty(3,1)).toEqual(2)
+		expect(isEmpty([1,2], (sum, n) => sum + n, 0)).toEqual(3)
 	})
 })
