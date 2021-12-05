@@ -4,6 +4,7 @@ import eq from "../eq.js"
 //import every from "../every.js"
 //import get from "../get.js"
 import isEmpty from "../isEmpty.js"
+import capitalize from "../capitalize.js"
 
 
 
@@ -16,7 +17,7 @@ class Store {
     }
 
     // if addition successful return true, else false
-    addProduct(product, price = 5){
+    addProduct(product, price = 5.00){
        
         var flag = true
 
@@ -45,8 +46,8 @@ class Store {
         this.storage = []
         this.stock = {}
         this.prices = {}
-        this.addProduct('apples', 2)
-        this.addProduct('pears', 7)
+        this.addProduct('apples', 2.00)
+        this.addProduct('pears', 7.00)
         this.addProduct('bananas')
     }
 
@@ -54,6 +55,19 @@ class Store {
         this.stock[product] -= n
         // return new amount in stock
         return `Still left in stock: ${this.stock[product]}`
+    }
+
+
+    printOutStorage(){
+        var output = ""
+        this.storage.forEach(product => {
+            let name = capitalize(product)
+            let price = Number(this.prices[product]).toFixed(2)
+            
+            output += `${name} : ${price} e\n`
+        });
+        
+        return output
     }
 
 
