@@ -5,6 +5,8 @@ import eq from "../eq.js"
 //import get from "../get.js"
 import isEmpty from "../isEmpty.js"
 import capitalize from "../capitalize.js"
+import map from "../map.js"
+import add from "../add.js"
 
 
 
@@ -74,7 +76,51 @@ class Store {
 
 }
 
+class Cart{
+    constructor(){
+        this.products = []
+        
+    }
 
-module.exports = {Store}
+    addProductToCart(name, price){
+        if(isEmpty(name)){
+            return false
+        }
+
+        this.products.push([name, price])
+    }
+
+    getProductPrice(product){
+        return product[1]
+    }
+
+    getProductName(product){
+        return product[0]
+    }
+
+    getCartTotal(){
+        var total = 0
+        let array_of_prices = map(this.products, this.getProductPrice)
+        array_of_prices.forEach(price => {
+            total = add(total, price)
+        });
+        return total
+    }
+
+    clearCart(){
+        this.products = []
+    }
+
+    getProducts(){
+        var items = ""
+        this.products.forEach(item => {
+            items += item[0] + ","
+        });
+        return items
+    }
+}
+
+
+module.exports = {Store, Cart}
 
 
